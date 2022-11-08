@@ -26,6 +26,8 @@ import { TelaSistemaPacienteComponent } from './telas-pacientes/tela-sistema-pac
 import { TelaSistemaPacienteHistoricoConsultasComponent } from './telas-pacientes/tela-sistema-paciente-historico-consultas/tela-sistema-paciente-historico-consultas.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { TelaSistemaAgendamentosPendentesComponent } from './telas/tela-sistema-agendamentos-pendentes/tela-sistema-agendamentos-pendentes.component';
+import { TelaSistemaAgendamentosNovosComponent } from './telas/tela-sistema-agendamentos-novos/tela-sistema-agendamentos-novos.component';
+import { TelaSistemaAgendamentosHistoricoComponent } from './telas/tela-sistema-agendamentos-historico/tela-sistema-agendamentos-historico.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { TelaSistemaAgendamentosPendentesComponent } from './telas/tela-sistema-
     TelaSistemaPacienteComponent,
     TelaSistemaPacienteHistoricoConsultasComponent,
     TelaSistemaAgendamentosPendentesComponent,
+    TelaSistemaAgendamentosNovosComponent,
+    TelaSistemaAgendamentosHistoricoComponent,
   ],
 
   imports: [

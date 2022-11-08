@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
 
+
 @Component({
-  selector: 'app-tela-sistema-agendamentos-pendentes',
-  templateUrl: './tela-sistema-agendamentos-pendentes.component.html',
-  styleUrls: ['./tela-sistema-agendamentos-pendentes.component.css']
+  selector: 'app-tela-sistema-agendamentos-historico',
+  templateUrl: './tela-sistema-agendamentos-historico.component.html',
+  styleUrls: ['./tela-sistema-agendamentos-historico.component.css']
 })
-export class TelaSistemaAgendamentosPendentesComponent implements OnInit {
+
+export class TelaSistemaAgendamentosHistoricoComponent implements OnInit {
   filter: string;
 
-  key: string = 'nome'; // Define um valor padrão, para quando inicializar o componente
+  key: string = 'dataConsulta'; // Define um valor padrão, para quando inicializar o componente
   reverse: boolean = false;
   sort(key) {
     this.key = key;
@@ -122,4 +124,3 @@ export class TelaSistemaAgendamentosPendentesComponent implements OnInit {
   }
 
 }
-

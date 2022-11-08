@@ -57,7 +57,20 @@
             </div>
           </div>
 
-
+          <div class="dropdown5">
+            <button onclick="dropdown5()" class="dropbtn5"><span class="cinco fa fa-id-card mr-3"></span>Agendamentos<span class="cinco fa fa-caret-down"></span></button>
+            <div id="myDropdown5" class="dropdown-content5">
+              <li>
+                <a routerLink="/agendamentos-historico" routerLinkActive="active"><span class="cinco fa fa-history mr-3"></span>Histórico</a>
+              </li>
+              <li>
+                <a routerLink="/agendamentos-novos" routerLinkActive="active"><span class="cinco fa fa-plus mr-3"></span>Novo</a>
+              </li>
+              <li>
+                <a routerLink="/agendamentos-pendentes" routerLinkActive="active"><span class="cinco fa fa-clock-o mr-3"></span>Pendentes</a>
+              </li>
+            </div>
+          </div>
 
           <div class="dropdown3">
             <button onclick="myFunction3()" class="dropbtn3"><span class="fa fa-cogs mr-3"></span>Configurações<span class="fa fa-caret-down"></span></button>
@@ -86,7 +99,10 @@
             </div>
           </div>
         </ul>
-    	</nav>
+    	</nav>      4
+
+
+
 
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
@@ -185,43 +201,64 @@
                 </div>
             </div>
 
-              <div class= "row senha col-12 ">
-
-                  <div class="col-6">
-                    <label>Senha</label>
-                    <input id="passwordSenha" name="passwordSenha" type="password"  class="form-control input input-senha" aria-describedby="passwordHelpBlock" placeholder="Ex: App@doctor123">
-                    <span onclick="mostrarSenha2()" class="fa fa-eye senha"></span>
-                  </div>
-
-                  <div class="col-6">
-                    <label>Confirmar Senha</label>
-                    <input id="passwordConfirmarSenha" name="passwordConfirmarSenha" type="password"  class="form-control input input-confirmar-senha" aria-describedby="passwordHelpBlock" placeholder="Ex: App@doctor123">
-                    <span onclick="mostrarSenha3()" class="fa fa-eye confirmar-senha"></span>
-                  </div>
-
+            <div class="row anexo col-12">
+              <div class="col-12">
+                <label for="formFile" class="form-label assinatura">Faça Upload da Assinatura</label>
+                <input class="form-control" type="file" id="formFile">
               </div>
-
               <div>
                 <small id="dica-senha" class="form-text text-muted dica-senha">
-                  Sua senha deve ter entre 8 e 20 caracteres, os quais devem ser letras, sem espaços, com pelo menos 1 número e 1 caracter especial.
+                  O arquivo deve ser em um formato PNG*
                 </small>
               </div>
+            </div>
 
-              <div class="row anexo col-12">
-                <div class="col-12">
-                  <label for="formFile" class="form-label assinatura">Faça Upload da Assinatura</label>
-                  <input class="form-control" type="file" id="formFile">
-                </div>
-                <div>
-                  <small id="dica-senha" class="form-text text-muted dica-senha">
-                    O arquivo deve ser em um formato PNG*
-                  </small>
-                </div>
+            <div class="row usuario-medico col-12">
+              <h3 class="titulo-usuario"><span class="usuario fa fa-user"></span>Usuário do Médico</h3>
+
+              <div class="row email col-12">
+                <label>Email</label>
+                <input class="form-control input email-usuario" type="email" id="email" name="email" placeholder="Digite o email do usuário" formControlName="email" required/>
               </div>
+
+
+              <div class= "row senha col-12 ">
+
+                <div class="col-6">
+                  <label>Senha</label>
+                  <input id="passwordSenha" name="passwordSenha" type="password"  class="form-control input input-senha" aria-describedby="passwordHelpBlock" placeholder="Ex: App@doctor123">
+                  <span onclick="mostrarSenha2()" class="fa fa-eye senha"></span>
+                </div>
+
+                <div class="col-6">
+                  <label>Confirmar Senha</label>
+                  <input id="passwordConfirmarSenha" name="passwordConfirmarSenha" type="password"  class="form-control input input-confirmar-senha" aria-describedby="passwordHelpBlock" placeholder="Ex: App@doctor123">
+                  <span onclick="mostrarSenha3()" class="fa fa-eye confirmar-senha"></span>
+                </div>
+
+            </div>
+
+            <div>
+              <small id="dica-senha" class="form-text text-muted dica-senha">
+                A senha deve ter entre 8 e 20 caracteres, os quais devem ser letras, sem espaços, com pelo menos 1 número e 1 caracter especial.
+              </small>
+            </div>
+
+            <div class="col-9">
+              <button onclick="validarSenha()"  id="cadastrarUsuario" type="button" class="botao-cadastrar-usuario" style="width:100%;"><span class="fa fa-user-plus mr-3 icone"  style="color:rgb(255, 255, 255)"></span>Cadastrar Usuário</button>
+            </div>
+
+          </div>
+
+
+
+
+
+
 
               <div class="row botoes col-12" >
                 <div class="col-md-4 col-sm-4">
-                  <button onclick="validarSenha()" id="cadastrar" type="button" class="btn btn-success" style="width:100%;"><span class="fa fa-user-plus mr-3 icone"  style="color:rgb(255, 255, 255)"></span>Cadastrar</button>
+                  <button id="cadastrar" type="button" class="btn btn-success" style="width:100%;"><span class="fa fa-user-plus mr-3 icone"  style="color:rgb(255, 255, 255)"></span>Cadastrar Médico</button>
                 </div>
 
                 <div class="col-md-4 col-sm-4">
